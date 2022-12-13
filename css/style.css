@@ -25,6 +25,9 @@
   --secondary-color-8: hsl(270, 100%, 80%);
 }
 
+html {
+  scroll-behavior: smooth;
+}
 html ::-webkit-scrollbar {
   width: 8px;
 }
@@ -61,21 +64,14 @@ body {
   min-height: 90vh;
   max-width: 1200px;
   margin: auto;
-  padding: 1.5rem 2rem;
+  padding: 1.5rem 4rem;
   border: 1px solid #fff;
-  background: rgba(255, 255, 255, 0.2);
   border-radius: 16px;
   box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
   -webkit-backdrop-filter: blur(45px);
           backdrop-filter: blur(45px);
   border: 3px solid rgba(255, 255, 255, 0.3);
-}
-.hero .hero-container::before {
-  position: absolute;
-  min-height: 90vh;
-  max-width: 1200px;
-  -webkit-animation: 2s infinite;
-          animation: 2s infinite;
+  position: relative;
 }
 .hero .hero-container nav {
   display: flex;
@@ -95,11 +91,8 @@ body {
   position: absolute;
   top: 50%;
   transform: translate(0, -50%);
-  display: flex;
-  align-items: center;
-}
-.hero .hero-container .main .left {
-  width: 55%;
+  display: grid;
+  grid-template-columns: 55% 45%;
 }
 .hero .hero-container .main .left .heading {
   font-size: 5rem;
@@ -118,12 +111,9 @@ body {
   transition: transform linear 0.2s;
 }
 .hero .hero-container .main .left button:hover {
-  transform: scaleX(0.95);
   background-color: var(--primary-color-3);
+  border-radius: 2px;
   color: #fff;
-}
-.hero .hero-container .main .right {
-  width: 45%;
 }
 .hero .hero-container .main .right img {
   width: 100%;
@@ -137,9 +127,8 @@ body {
   min-height: 90vh;
   max-width: 1200px;
   margin: auto;
-  padding: 1.5rem 3rem;
+  padding: 1.5rem 4rem;
   border: 1px solid #fff;
-  background: rgba(255, 255, 255, 0.2);
   border-radius: 16px;
   box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
   -webkit-backdrop-filter: blur(45px);
@@ -187,4 +176,50 @@ body {
 }
 .skill .skill-container .main .box1 .el:active {
   transform: translate(0, 6px);
+}
+
+.about {
+  margin-top: 2rem;
+  position: relative;
+}
+.about .about-container {
+  min-height: 90vh;
+  max-width: 1200px;
+  margin: auto;
+  padding: 1.5rem 4rem;
+  border: 1px solid #fff;
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  -webkit-backdrop-filter: blur(45px);
+          backdrop-filter: blur(45px);
+  border: 3px solid rgba(255, 255, 255, 0.3);
+  position: relative;
+}
+.about .about-container .headline {
+  margin-top: 2rem;
+  text-align: center;
+}
+.about .about-container .headline .headline-img {
+  width: 100px;
+  height: 100px;
+  margin-bottom: 1.25rem;
+}
+.about .about-container .box1 {
+  padding: 2rem 1.5rem;
+  border: 2px solid rgba(255, 255, 255, 0.2);
+  background: hsla(210deg, 100%, 50%, 0.5);
+  border-left: 4px solid var(--primary-color-5);
+  margin-top: 2rem;
+}
+.about .about-container .box1 .el {
+  margin-bottom: 2.5rem;
+}
+.about .about-container .box1 .el .title {
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+}
+.about .about-container .box1 .el .date {
+  color: #d9d9d9;
+  font-size: 0.75rem;
+  margin-bottom: 1.5rem;
 }
