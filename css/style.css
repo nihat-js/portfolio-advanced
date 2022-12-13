@@ -205,20 +205,33 @@ body {
   margin-bottom: 1.25rem;
 }
 .about .about-container .box1 {
-  padding: 2rem 1.5rem;
   border: 2px solid rgba(255, 255, 255, 0.2);
-  background: hsla(210deg, 100%, 50%, 0.5);
-  border-left: 4px solid var(--primary-color-5);
+  background: hsla(210deg, 100%, 50%, 0.2);
   margin-top: 2rem;
+  display: grid;
+  grid-template-columns: 20% 80%;
 }
-.about .about-container .box1 .el {
+.about .about-container .box1 .tabs {
+  border-right: 2px solid #ee9922;
+  display: grid;
+  grid-template-rows: repeat(1fr, 3);
+}
+.about .about-container .box1 .tabs .tab {
+  display: grid;
+  place-items: center;
+  border-bottom: 2px solid #ee9922;
+}
+.about .about-container .box1 .box2 {
+  padding: 2rem 1.5rem;
+}
+.about .about-container .box1 .box2 .el {
   margin-bottom: 2.5rem;
 }
-.about .about-container .box1 .el .title {
+.about .about-container .box1 .box2 .el .title {
   font-size: 1.5rem;
   margin-bottom: 0.5rem;
 }
-.about .about-container .box1 .el .date {
+.about .about-container .box1 .box2 .el .date {
   color: #d9d9d9;
   font-size: 0.75rem;
   margin-bottom: 1.5rem;

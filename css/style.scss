@@ -227,26 +227,43 @@ body {
       }
 
       .box1 {
-         padding: 2rem 1.5rem;
          border: 2px solid rgba(255, 255, 255, 0.2);
-         background: hsl(210, 100%, 50%, 0.5);
-         border-left: 4px solid var(--primary-color-5);
+         background: hsl(210, 100%, 50%, 0.2);
          margin-top: 2rem;
+         display: grid;
+         grid-template-columns: 20% 80%;
 
-         .el {
-            margin-bottom: 2.5rem;
+         .tabs {
+            border-right: 2px solid #ee9922;
+            display: grid;
+            grid-template-rows: repeat(1fr, 3);
 
-            .title {
-               font-size: 1.5rem;
-               margin-bottom: .5rem;
-            }
-
-            .date {
-               color: #d9d9d9;
-               font-size: .75rem;
-               margin-bottom: 1.5rem;
+            .tab {
+               display: grid;
+               place-items: center;
+               border-bottom: 2px solid #ee9922;
             }
          }
+
+         .box2 {
+            padding: 2rem 1.5rem;
+
+            .el {
+               margin-bottom: 2.5rem;
+
+               .title {
+                  font-size: 1.5rem;
+                  margin-bottom: .5rem;
+               }
+
+               .date {
+                  color: #d9d9d9;
+                  font-size: .75rem;
+                  margin-bottom: 1.5rem;
+               }
+            }
+         }
+
       }
 
    }
