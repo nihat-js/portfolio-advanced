@@ -25,6 +25,10 @@
   --secondary-color-8: hsl(270, 100%, 80%);
 }
 
+.d-none {
+  display: none !important;
+}
+
 html {
   scroll-behavior: smooth;
 }
@@ -205,6 +209,7 @@ body {
   margin-bottom: 1.25rem;
 }
 .about .about-container .box1 {
+  height: 400px;
   border: 2px solid rgba(255, 255, 255, 0.2);
   background: hsla(210deg, 100%, 50%, 0.2);
   margin-top: 2rem;
@@ -212,14 +217,18 @@ body {
   grid-template-columns: 20% 80%;
 }
 .about .about-container .box1 .tabs {
-  border-right: 2px solid #ee9922;
+  border-right: 2px solid hsl(235deg, 100%, 85%);
   display: grid;
   grid-template-rows: repeat(1fr, 3);
+  cursor: pointer;
 }
 .about .about-container .box1 .tabs .tab {
   display: grid;
   place-items: center;
-  border-bottom: 2px solid #ee9922;
+  border-bottom: 2px solid hsl(215deg, 100%, 85%);
+}
+.about .about-container .box1 .tabs .tab:hover {
+  background: hsl(235deg, 100%, 85%);
 }
 .about .about-container .box1 .box2 {
   padding: 2rem 1.5rem;

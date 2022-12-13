@@ -8,6 +8,17 @@ function btnNextSoftClick() {
 // root.style.setProperty('primary-color-')
 
 
-document.body.style.background = "#000 !important"
-document.body.style.color = "#fff"
-console.log('se');
+// document.body.style.background = "#000 !important"
+// document.body.style.color = "#fff"
+// console.log('se');
+document.querySelectorAll('.tabs .tab').forEach(el1 => {
+   el1.onclick = function () {
+      document.querySelectorAll('.box2  > div').forEach((el2, el2Id) => {
+         if (el2Id == el1.dataset.id) {
+            el2.classList.remove('d-none')
+         } else {
+            el2.classList.add('d-none')
+         }
+      })
+   }
+})
