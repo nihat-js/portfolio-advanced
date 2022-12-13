@@ -20,5 +20,12 @@ document.querySelectorAll('.tabs .tab').forEach(el1 => {
             el2.classList.add('d-none')
          }
       })
+      document.querySelectorAll('.tabs .tab').forEach(p => {
+         if (p == el1) {
+            p.classList.add('active')
+         } else {
+            p.classList.remove('active')
+         }
+      })
    }
 })
